@@ -97,6 +97,8 @@ jobs:
   test-image:
     needs: build
     runs-on: ubuntu-latest
-    steps: docker run ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
+    steps:
+      - name: docker run heitor
+        run: docker run ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
       
         
